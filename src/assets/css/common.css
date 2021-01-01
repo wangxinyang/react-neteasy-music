@@ -1,0 +1,152 @@
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.w {
+    width: 1100px;
+    margin: 0 auto;
+}
+
+.topbar {
+    width: 1665px;
+    top: 0px;
+}
+
+.header_top {
+    height: 70px;
+    background-color: #242424;
+}
+
+.logo,
+.cor,
+.hot,
+.search {
+    background: url('../images/sprite_01.png') no-repeat;
+}
+
+.logo {
+    float: left;
+    width: 158px;
+    height: 70px;
+    padding-right: 20px;
+    background-position: 0 0;
+}
+
+.logo a {
+    float: left;
+    width: 158px;
+    height: 100%;
+    text-indent: -9999px;
+}
+
+.nav_items {
+    line-height: 70px;
+}
+
+.nav_items li,
+.nav_items a,
+.nav_items a em {
+    float: left;
+    height: 70px;
+    font-size: 14px;
+}
+
+.nav_items li {
+    position: relative;
+}
+
+.nav_items a {
+    padding: 0 19px;
+    text-align: center;
+    line-height: 70px;
+    color: #ccc;
+}
+
+.nav_items a:hover,
+.nav_items .z-slt {
+    background-color: #000000;
+    color: #fff;
+}
+
+.cor {
+    position: absolute;
+    top: 64px;
+    left: 40%;
+    width: 12px;
+    height: 7px;
+    overflow: hidden;
+    background-position: -226px 0px;
+}
+
+.lst {
+    position: relative;
+}
+
+.hot {
+    position: absolute;
+    top: 21px;
+    left: 100px;
+    width: 28px;
+    height: 19px;
+    background-position: -192px 0px;
+}
+
+.login {
+    float: right;
+    margin: 0 0 0 20px;
+}
+
+.login a {
+    font-size: 12px;
+    line-height: 70px;
+    color: #6f6f6f;
+}
+
+.creator-center {
+    float: right;
+    line-height: 33px;
+    margin: 19px 0 0 12px;
+    font-size: 12px;
+    width: 90px;
+    height: 32px;
+    padding-left: 16px;
+    border: 1px solid #4f4f4f;
+    border-radius: 20px;
+    /* 设置的边框和内边距的值是包含在width内的 */
+    box-sizing: border-box;
+}
+
+.search {
+    float: right;
+    margin-top: 19px;
+    width: 158px;
+    height: 32px;
+    border-radius: 32px;
+    background-color: #fff;
+    background-position: 0 -99px;
+}
+
+.search_parent {
+    display: block;
+    margin: 8px 0 0 30px;
+    font-size: 12px;
+}
+
+.search_text {
+    background: transparent;
+    width: 95%;
+    font-size: 12px;
+    line-height: 16px;
+    color: #000000;
+    opacity: 1;
+}
+
+.navi_2 {
+    height: 35px;
+    background-color: #c20c0c;
+    border-bottom: 1px solid #a40011;
+}
