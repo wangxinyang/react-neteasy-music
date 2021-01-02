@@ -1,7 +1,4 @@
-const initalData = {};
+/* eslint-disable import/no-anonymous-default-export */
+import { reducer as recommendReducer } from '../../pages/discover/subpages/recommanded/store';
 
-function index(state = initalData, action) {
-  return state;
-}
-
-export default index;
+export default { recommendReducer };

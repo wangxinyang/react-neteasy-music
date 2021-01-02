@@ -1,5 +1,10 @@
 import React from 'react';
+import TopBanner from './componets/topBanner';
 
 export default function Recommanded() {
-  return <div>推荐</div>;
+  return (
+    <div>
+      <TopBanner />
+    </div>
+  );
 }

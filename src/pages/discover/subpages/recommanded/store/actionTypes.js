@@ -1,0 +1,1 @@
+export const GET_TOP_BANNERS = 'GET_TOP_BANNERS';
