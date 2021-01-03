@@ -2,6 +2,7 @@ import * as actionTypes from './actionTypes';
 
 const initalData = {
   topBanners: [],
+  hotRecommandeds: [],
 };
 
 function reducer(state = initalData, action) {
@@ -10,6 +11,15 @@ function reducer(state = initalData, action) {
       if (action.topBanners) {
         let topBannersData = [...action.topBanners];
         return Object.assign({}, state, { topBanners: topBannersData });
+      } else {
+        return state;
+      }
+    case actionTypes.GET_HOT_RECOMMANDED:
+      if (action.hotRecommandeds) {
+        let hotRecommandedsData = [...action.hotRecommandeds];
+        return Object.assign({}, state, {
+          hotRecommandeds: hotRecommandedsData,
+        });
       } else {
         return state;
       }
