@@ -26,4 +26,4 @@
 
    - LP ページ
    
-     <img src="https://github.com/wangxinyang/pic_library/blob/main/react-nymusic/shouye.png" max-width:100%;>
+     ![](https://github.com/wangxinyang/pic_library/blob/main/react-nymusic/shouye.png)
