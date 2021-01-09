@@ -3,6 +3,7 @@ import * as actionTypes from './actionTypes';
 const initalData = {
   topBanners: [],
   hotRecommandeds: [],
+  newAlbum: [],
 };
 
 function reducer(state = initalData, action) {
@@ -19,6 +20,15 @@ function reducer(state = initalData, action) {
         let hotRecommandedsData = [...action.hotRecommandeds];
         return Object.assign({}, state, {
           hotRecommandeds: hotRecommandedsData,
+        });
+      } else {
+        return state;
+      }
+    case actionTypes.GET_NEW_ALBUM:
+      if (action.newAlbum) {
+        let newAlbumData = [...action.newAlbum];
+        return Object.assign({}, state, {
+          newAlbum: newAlbumData,
         });
       } else {
         return state;

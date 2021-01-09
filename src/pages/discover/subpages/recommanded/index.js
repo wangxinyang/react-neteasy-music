@@ -1,6 +1,7 @@
 import React from 'react';
 import TopBanner from './componets/topBanner';
 import HotRecommanded from './componets/hotRecommanded';
+import NewAlbum from './componets/newAlbum';
 import { ContentWrapper, ContentLeft, ContentRight } from './style';
 
 export default function Recommanded() {
@@ -14,6 +15,8 @@ export default function Recommanded() {
         <ContentLeft>
           {/* 热门推荐 */}
           <HotRecommanded />
+          {/* 新歌上架 */}
+          <NewAlbum />
         </ContentLeft>
         {/* 内容区域右边部分 */}
         <ContentRight></ContentRight>

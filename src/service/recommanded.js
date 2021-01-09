@@ -9,3 +9,8 @@ export function getTopBanners() {
 export function getHotRecommanded(limit) {
   return http.get('/personalized', { params: { limit: limit } });
 }
+
+// 发起请求新碟上架的request
+export function getNewAlbum() {
+  return http.get('/album/newest');
+}

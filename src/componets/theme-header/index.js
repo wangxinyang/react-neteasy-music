@@ -11,14 +11,15 @@ const ThemeHeader = function ThemeHeader(props) {
           {title}
         </a>
         <ul className="keywords">
-          {keywords.map((item) => {
-            return (
-              <li key={item} className="cat-item">
-                <a href={`/discover/playList/?cat=${item}`}>{item}</a>
-                <span className="line">|</span>
-              </li>
-            );
-          })}
+          {keywords &&
+            keywords.map((item) => {
+              return (
+                <li key={item} className="cat-item">
+                  <a href={`/discover/playList/?cat=${item}`}>{item}</a>
+                  <span className="line">|</span>
+                </li>
+              );
+            })}
         </ul>
       </ThemeHeaderLeft>
       {/* 右侧更多选项 */}
