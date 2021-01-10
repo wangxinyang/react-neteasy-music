@@ -14,3 +14,8 @@ export function getHotRecommanded(limit) {
 export function getNewAlbum() {
   return http.get('/album/newest');
 }
+
+// 发起排行榜的request
+export function getRanking(index) {
+  return http.get('/playlist/detail', { params: { id: index } });
+}

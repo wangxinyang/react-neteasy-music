@@ -4,6 +4,9 @@ const initalData = {
   topBanners: [],
   hotRecommandeds: [],
   newAlbum: [],
+  upRanking: {},
+  newRanking: {},
+  originRanking: {},
 };
 
 function reducer(state = initalData, action) {
@@ -29,6 +32,33 @@ function reducer(state = initalData, action) {
         let newAlbumData = [...action.newAlbum];
         return Object.assign({}, state, {
           newAlbum: newAlbumData,
+        });
+      } else {
+        return state;
+      }
+    case actionTypes.GET_UP_RANKING:
+      if (action.upRanking) {
+        let upRanking = { ...action.upRanking };
+        return Object.assign({}, state, {
+          upRanking,
+        });
+      } else {
+        return state;
+      }
+    case actionTypes.GET_NEW_RANKING:
+      if (action.newRanking) {
+        let newRanking = { ...action.newRanking };
+        return Object.assign({}, state, {
+          newRanking,
+        });
+      } else {
+        return state;
+      }
+    case actionTypes.GET_ORIGIN_RANKING:
+      if (action.originRanking) {
+        let originRanking = { ...action.originRanking };
+        return Object.assign({}, state, {
+          originRanking,
         });
       } else {
         return state;

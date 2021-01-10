@@ -2,6 +2,7 @@ import {
   getTopBanners,
   getHotRecommanded,
   getNewAlbum,
+  getRanking,
 } from '../../../../../service/recommanded';
 import * as actionTypes from './actionTypes';
 
@@ -21,6 +22,24 @@ export const hotRecommandedAction = (res) => ({
 export const newAlbumAction = (res) => ({
   type: actionTypes.GET_NEW_ALBUM,
   newAlbum: res.albums,
+});
+
+// 获取飙升榜的action
+export const upRankingAction = (res) => ({
+  type: actionTypes.GET_UP_RANKING,
+  upRanking: res.playlist,
+});
+
+// 获取新歌榜的action
+export const newRankingAction = (res) => ({
+  type: actionTypes.GET_NEW_RANKING,
+  newRanking: res.playlist,
+});
+
+// 获取原创榜的action
+export const originRankingAction = (res) => ({
+  type: actionTypes.GET_ORIGIN_RANKING,
+  originRanking: res.playlist,
 });
 
 // --------------------------------------------------------------
@@ -48,6 +67,26 @@ export const getNewAlbumAction = () => {
   return (dispatch) => {
     getNewAlbum().then((res) => {
       dispatch(newAlbumAction(res));
+    });
+  };
+};
+
+// 排行榜请求
+export const getRankingAction = (index) => {
+  return (dispatch) => {
+    getRanking(index).then((res) => {
+      switch (index) {
+        case 19723756:
+          dispatch(upRankingAction(res));
+          break;
+        case 3779629:
+          dispatch(newRankingAction(res));
+          break;
+        case 2884035:
+          dispatch(originRankingAction(res));
+          break;
+        default:
+      }
     });
   };
 };

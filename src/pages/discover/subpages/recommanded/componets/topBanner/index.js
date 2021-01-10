@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useRef, useEffect, useState, useCallback, memo } from 'react';
 import { BannerWrapper, BannerLeft, BannerRight, BannerControl } from './style';
 import { connect } from 'react-redux';
@@ -9,7 +10,7 @@ function TopBanner(props) {
   // 使用hooks来像原来的生命周期函数一样使用
   useEffect(() => {
     dispatch(getTopBannersAction());
-  }, [dispatch]);
+  }, []);
 
   const carouselRef = useRef();
 

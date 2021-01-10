@@ -13,7 +13,8 @@ function NewAlbum(props) {
 
   useEffect(() => {
     dispatch(getNewAlbumAction());
-  }, [dispatch]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <NewAlbumWrapper>
@@ -62,7 +63,6 @@ function NewAlbum(props) {
 }
 
 const mapStateToProps = (state) => {
-  console.log(state.recommendReducer.newAlbum);
   return {
     newAlbum: state.recommendReducer.newAlbum,
   };

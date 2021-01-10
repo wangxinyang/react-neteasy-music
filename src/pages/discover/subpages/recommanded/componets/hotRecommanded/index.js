@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, memo } from 'react';
 import { connect } from 'react-redux';
 import { HotRecommandedWrapper } from './style';
@@ -10,7 +11,7 @@ function HotRecommanded(props) {
   const { dispatch, hotRecommandeds } = props;
   useEffect(() => {
     dispatch(getHotRecommandedAction(HOT_RECOMMEND_LIMIT));
-  }, [dispatch]);
+  }, []);
 
   return (
     <HotRecommandedWrapper>
